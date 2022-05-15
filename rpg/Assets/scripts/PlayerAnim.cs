@@ -26,7 +26,7 @@ public class PlayerAnim : MonoBehaviour
 
         void OnMove()
         {
-            //altera a animação para a animação idle se estiver parado
+            //altera a animaï¿½ï¿½o para a animaï¿½ï¿½o idle se estiver parado
             if (Player.direction.sqrMagnitude > 0)
             {
 
@@ -40,7 +40,7 @@ public class PlayerAnim : MonoBehaviour
 
             }else
             {
-                //altera a animação para andando se o personagem estiver andando
+                //altera a animaï¿½ï¿½o para andando se o personagem estiver andando
                 Anim.SetInteger("transition", 0);
             }
 
@@ -54,6 +54,13 @@ public class PlayerAnim : MonoBehaviour
             {
                 transform.eulerAngles = new Vector2(0, 180);
             }
+
+            //animaÃ§Ã£o de cortar
+            if(Player.isCutting)
+            {
+                Anim.SetInteger("transition", 3);
+            }
+
         }
         
         void OnRun()

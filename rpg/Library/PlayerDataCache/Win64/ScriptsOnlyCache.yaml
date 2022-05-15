@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - DialogueControl
     - DialogueSettings
+    - NPC
     - NPC_Dialogue
     - Player
     - PlayerAnim
@@ -15,6 +16,7 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.PixelPerfect.dll:
@@ -26,6 +28,7 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.GridPaintPaletteWindow
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
+    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.PaintableSceneViewGrid
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
@@ -36,8 +39,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -46,6 +51,7 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
@@ -103,17 +109,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3368}
     - Class: 114
+      Script: {instanceID: 3490}
+    - Class: 114
       Script: {instanceID: 4034}
     - Class: 114
       Script: {instanceID: 4338}
     - Class: 114
       Script: {instanceID: 4572}
     - Class: 114
-      Script: {instanceID: 5150}
+      Script: {instanceID: 4866}
     - Class: 114
-      Script: {instanceID: 5804}
+      Script: {instanceID: 5152}
     - Class: 114
-      Script: {instanceID: 5816}
+      Script: {instanceID: 5806}
+    - Class: 114
+      Script: {instanceID: 5818}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -145,7 +155,7 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: beb8402ba66b08f4c8f9b87b46306102
+      Hash: 27fb07a907b01b52ec626668285b9a25
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DialogueControl
@@ -811,6 +821,12 @@ ScriptsOnlyBuild:
     className: CinemachineStoryboard
   - hash:
       serializedVersion: 2
+      Hash: 7c5c382d882a9953878492c108c756e0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NPC
+  - hash:
+      serializedVersion: 2
       Hash: ffd3ed4fcd23b3e7745287c99a637247
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -980,4 +996,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/angel/Documents/Dev/Jogos/Unity/Builds/Crie Seus jogos/rpg/rpg.exe
+  playerPath: C:/Users/angel/Documents/Dev/Jogos/Unity/Builds/Crie Seus jogos/rpg.exe
