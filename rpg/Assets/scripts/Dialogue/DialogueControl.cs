@@ -24,7 +24,7 @@ public class DialogueControl : MonoBehaviour
     [Header("Settings")]
     public float typingSpreed;//velocidade da fala
 
-    private bool isShowing; // se a janela de dialogo está visível
+    [HideInInspector] public bool isShowing; // se a janela de dialogo está visível
     private int index; //index das sentenças
     private string[] sentences;
 
