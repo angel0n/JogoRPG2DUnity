@@ -60,6 +60,16 @@ public class PlayerAnim : MonoBehaviour
             {
                 Anim.SetInteger("transition", 3);
             }
+            //animação de cavar
+            if(Player.isDigging)
+            {
+                Anim.SetInteger("transition", 4);
+            }
+             //animação de regar
+            if(Player.isWaltering)
+            {
+                Anim.SetInteger("transition", 5);
+            }
 
         }
         

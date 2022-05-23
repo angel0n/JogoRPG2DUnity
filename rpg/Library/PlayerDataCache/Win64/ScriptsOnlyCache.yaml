@@ -7,6 +7,11 @@ ScriptsOnlyBuild:
     - NPC_Dialogue
     - Player
     - PlayerAnim
+    - PlayerItens
+    - SlotFarm
+    - Walter
+    - Wood
+    - tree
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
     - Cinemachine.CinemachineFramingTransposer
@@ -14,6 +19,7 @@ ScriptsOnlyBuild:
     - Cinemachine.CinemachineVirtualCamera
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
+    - UnityEditor.U2D.Animation.SkinningCachePersistentState
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
     - UnityEditor.U2D.IK.IKGizmos
@@ -72,6 +78,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 50
       Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
     - Class: 66
@@ -93,37 +101,47 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1522}
     - Class: 114
-      Script: {instanceID: 2260}
+      Script: {instanceID: 1592}
     - Class: 114
-      Script: {instanceID: 2646}
+      Script: {instanceID: 2262}
     - Class: 114
-      Script: {instanceID: 2700}
+      Script: {instanceID: 2572}
     - Class: 114
-      Script: {instanceID: 2784}
+      Script: {instanceID: 2650}
     - Class: 114
-      Script: {instanceID: 2880}
+      Script: {instanceID: 2704}
     - Class: 114
-      Script: {instanceID: 2968}
+      Script: {instanceID: 2734}
     - Class: 114
-      Script: {instanceID: 3110}
+      Script: {instanceID: 2790}
     - Class: 114
-      Script: {instanceID: 3368}
+      Script: {instanceID: 2886}
     - Class: 114
-      Script: {instanceID: 3490}
+      Script: {instanceID: 2974}
     - Class: 114
-      Script: {instanceID: 4034}
+      Script: {instanceID: 3116}
     - Class: 114
-      Script: {instanceID: 4338}
+      Script: {instanceID: 3374}
     - Class: 114
-      Script: {instanceID: 4572}
+      Script: {instanceID: 3496}
     - Class: 114
-      Script: {instanceID: 4866}
+      Script: {instanceID: 4040}
     - Class: 114
-      Script: {instanceID: 5152}
+      Script: {instanceID: 4344}
     - Class: 114
-      Script: {instanceID: 5806}
+      Script: {instanceID: 4578}
     - Class: 114
-      Script: {instanceID: 5818}
+      Script: {instanceID: 4872}
+    - Class: 114
+      Script: {instanceID: 5158}
+    - Class: 114
+      Script: {instanceID: 5812}
+    - Class: 114
+      Script: {instanceID: 5824}
+    - Class: 114
+      Script: {instanceID: 26114}
+    - Class: 114
+      Script: {instanceID: 28482}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -131,6 +149,10 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 212
       Script: {instanceID: 0}
@@ -189,6 +211,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_InputField
+  - hash:
+      serializedVersion: 2
+      Hash: 5894e84583517833101e537f54cfc451
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: tree
   - hash:
       serializedVersion: 2
       Hash: 71b711096c6c32621c1d4c02310898b7
@@ -353,6 +381,12 @@ ScriptsOnlyBuild:
     className: IKManager2D
   - hash:
       serializedVersion: 2
+      Hash: 092f2dac8f45a82b7b5764aeaca79624
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Wood
+  - hash:
+      serializedVersion: 2
       Hash: 62824bb9557c7e987502f2fbd2a26819
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -375,6 +409,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineSameAsFollowTarget
+  - hash:
+      serializedVersion: 2
+      Hash: 73d18fdb6170b43a1b7f5931c6284608
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerItens
   - hash:
       serializedVersion: 2
       Hash: c8f1a224e0a43adc56c91864de822dd3
@@ -993,7 +1033,19 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
+  - hash:
+      serializedVersion: 2
+      Hash: 053b9cb8130d24190e900d8eed2a6428
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SlotFarm
+  - hash:
+      serializedVersion: 2
+      Hash: 2326992a707bb88c10d915c822d45ec4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Walter
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/angel/Documents/Dev/Jogos/Unity/Builds/Crie Seus jogos/rpg.exe
+  playerPath: C:/Users/angel/Documents/Dev/Jogos/Unity/Builds/Crie Seus jogos/RPG/rpg.exe
