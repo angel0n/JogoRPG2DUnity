@@ -19,7 +19,6 @@ ScriptsOnlyBuild:
     - Cinemachine.CinemachineVirtualCamera
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
-    - UnityEditor.U2D.Animation.SkinningCachePersistentState
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
     - UnityEditor.U2D.IK.IKGizmos
@@ -45,10 +44,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -121,27 +118,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3116}
     - Class: 114
-      Script: {instanceID: 3374}
+      Script: {instanceID: 3332}
     - Class: 114
-      Script: {instanceID: 3496}
+      Script: {instanceID: 3376}
     - Class: 114
-      Script: {instanceID: 4040}
+      Script: {instanceID: 3498}
     - Class: 114
-      Script: {instanceID: 4344}
+      Script: {instanceID: 4042}
     - Class: 114
-      Script: {instanceID: 4578}
+      Script: {instanceID: 4346}
     - Class: 114
-      Script: {instanceID: 4872}
+      Script: {instanceID: 4580}
     - Class: 114
-      Script: {instanceID: 5158}
+      Script: {instanceID: 4874}
     - Class: 114
-      Script: {instanceID: 5812}
+      Script: {instanceID: 5160}
     - Class: 114
-      Script: {instanceID: 5824}
+      Script: {instanceID: 5814}
     - Class: 114
-      Script: {instanceID: 26114}
+      Script: {instanceID: 5826}
     - Class: 114
-      Script: {instanceID: 28482}
+      Script: {instanceID: 5834}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -535,6 +532,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: Cinemachine3rdPersonFollow
+  - hash:
+      serializedVersion: 2
+      Hash: 2326992a707bb88c10d915c822d45ec4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Walter
   - hash:
       serializedVersion: 2
       Hash: 748dd2a2a28da4e618912da5ac45684b
@@ -1017,6 +1020,12 @@ ScriptsOnlyBuild:
     className: Player
   - hash:
       serializedVersion: 2
+      Hash: 053b9cb8130d24190e900d8eed2a6428
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SlotFarm
+  - hash:
+      serializedVersion: 2
       Hash: abf1930d8126d0b2e00e9449129a0190
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -1033,18 +1042,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
-  - hash:
-      serializedVersion: 2
-      Hash: 053b9cb8130d24190e900d8eed2a6428
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SlotFarm
-  - hash:
-      serializedVersion: 2
-      Hash: 2326992a707bb88c10d915c822d45ec4
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Walter
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

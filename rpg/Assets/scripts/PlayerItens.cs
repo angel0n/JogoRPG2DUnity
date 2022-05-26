@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class PlayerItens : MonoBehaviour
 {
-
+     [Header("Amounts")]
     public int totalWood;
     public int totalCarrot;
     public float currentWater;
-    
-    private float waterLimit = 50;
+
+    [Header("Limits")]
+    public float waterLimit = 50;
+    public float carrotLimit = 15;
+    public float woodLimit = 10;
 
     public void waterIncrement(float water)
     {
