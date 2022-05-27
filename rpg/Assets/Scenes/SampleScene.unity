@@ -856,7 +856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.49803922}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1094,7 +1094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.49803922}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1738,6 +1738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   runSpeed: 8
+  handlingObj: 0
 --- !u!95 &448737762
 Animator:
   serializedVersion: 3
@@ -5599,7 +5600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.49803922}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -30541,6 +30542,12 @@ MonoBehaviour:
   waterUIBar: {fileID: 1474121659}
   woodUIBar: {fileID: 1831394549}
   carrotUIBar: {fileID: 1195680}
+  toolsUI:
+  - {fileID: 124559941}
+  - {fileID: 1219171333}
+  - {fileID: 240567033}
+  selectColor: {r: 1, g: 1, b: 1, a: 1}
+  alphaColor: {r: 1, g: 1, b: 1, a: 0.49803922}
 --- !u!4 &1997217321
 Transform:
   m_ObjectHideFlags: 0

@@ -17,7 +17,8 @@ public class Player : MonoBehaviour
     private bool _isDigging;
     private bool _isWaltering;
     private Vector2 _direction;
-    private int handlingObj;
+    
+    [HideInInspector] public int handlingObj;
 
     public Vector2 direction
     {
@@ -66,17 +67,17 @@ public class Player : MonoBehaviour
         //teclas numericas de cima
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-            handlingObj = 1;
+            handlingObj = 0;
         }
 
         if(Input.GetKeyDown(KeyCode.Alpha2))
         {
-            handlingObj = 2;
+            handlingObj = 1;
         }
 
         if(Input.GetKeyDown(KeyCode.Alpha3))
         {
-            handlingObj = 3;
+            handlingObj = 2;
         }
 
         OnInput();
@@ -95,7 +96,7 @@ public class Player : MonoBehaviour
     #region Moviment
         void onWaltering()
         {
-            if(handlingObj == 3 )
+            if(handlingObj == 2 )
             {
                 if(Input.GetMouseButtonDown(0) && playerItens.currentWater > 0)
                 {
@@ -117,7 +118,7 @@ public class Player : MonoBehaviour
         }
         void onDig()
         {
-            if(handlingObj == 2)
+            if(handlingObj == 1)
             {
                 if(Input.GetMouseButtonDown(0))
                 {
@@ -134,7 +135,7 @@ public class Player : MonoBehaviour
         }
         void onCutting()
         {
-            if(handlingObj == 1)
+            if(handlingObj == 0)
             {
                 if(Input.GetMouseButtonDown(0))
                 {
