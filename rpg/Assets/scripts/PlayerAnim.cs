@@ -96,6 +96,14 @@ public class PlayerAnim : MonoBehaviour
              Player.isPaused = false;
         }
 
+        public void onHammeringStarted()
+        {
+            Anim.SetBool("hammering",true);
+        }
+        public void onHammeringEnded()
+        {
+            Anim.SetBool("hammering",false);
+        }
     #endregion
 
 }
