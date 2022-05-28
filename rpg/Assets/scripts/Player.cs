@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D rig;
     private PlayerItens playerItens;
 
+    public bool isPaused;
     private float initialSpeed;
     private bool  _isRunning;
     private bool _isRolling;
@@ -64,33 +65,41 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
-        //teclas numericas de cima
-        if(Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            handlingObj = 0;
-        }
 
-        if(Input.GetKeyDown(KeyCode.Alpha2))
+        if(!isPaused)
         {
-            handlingObj = 1;
-        }
+            //teclas numericas de cima
+            if(Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                handlingObj = 0;
+            }
 
-        if(Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            handlingObj = 2;
-        }
+            if(Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                handlingObj = 1;
+            }
 
-        OnInput();
-        OnRun();
-        OnRolling();
-        onCutting();
-        onDig();
-        onWaltering();
+            if(Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                handlingObj = 2;
+            }
+
+            OnInput();
+            OnRun();
+            OnRolling();
+            onCutting();
+            onDig();
+            onWaltering();
+        }
+        
     }
 
     private void FixedUpdate()
     {
-        OnMove();
+        if(!isPaused)
+        {
+            OnMove();
+        }
     }
 
     #region Moviment

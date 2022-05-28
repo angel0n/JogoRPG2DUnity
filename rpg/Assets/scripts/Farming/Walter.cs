@@ -6,6 +6,7 @@ public class Walter : MonoBehaviour
 {   
     [SerializeField] private bool detectingPlayer;
     [SerializeField] private int waterValue;
+    
     private PlayerItens player;
     // Start is called before the first frame update
     void Start()

@@ -6,12 +6,14 @@ public class PlayerAnim : MonoBehaviour
 {
     private Player Player;
     private Animator Anim;
+    private Casting cast;
 
     // Start is called before the first frame update
     void Start()
     {
         Player = GetComponent<Player>();
         Anim = GetComponent<Animator>();
+        cast = FindObjectOfType<Casting>();
     }
 
     // Update is called once per frame
@@ -80,6 +82,20 @@ public class PlayerAnim : MonoBehaviour
                 Anim.SetInteger("transition", 2);
             }
         }
+
+        //chamado quando jogador presiona botão de ação na agua
+        public void onCastingStarted()
+        {
+            Anim.SetTrigger("isCasting");
+            Player.isPaused = true;
+        }
+        //chamado quando termina a animação de pesca
+        public void onCastingEnded()
+        {
+            cast.onCasting();
+             Player.isPaused = false;
+        }
+
     #endregion
 
 }
