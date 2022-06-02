@@ -9,6 +9,7 @@ public class AnimationControl : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
 
     private Animator anim;
+    private PlayerAnim playerAnim;
 
     private void Start() {
         anim = GetComponent<Animator>();
@@ -17,6 +18,7 @@ public class AnimationControl : MonoBehaviour
     public void playAnim(int value) 
     {
         anim.SetInteger("transition", value);
+        playerAnim = FindObjectOfType<PlayerAnim>();
     }
 
     public void attack()
@@ -26,7 +28,7 @@ public class AnimationControl : MonoBehaviour
         if(hit != null)
         {
             //detecta ataque no player
-            Debug.Log("Bateu!");
+            playerAnim.onHit();
         }
         else
         {

@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     private bool _isCutting;
     private bool _isDigging;
     private bool _isWaltering;
+    private bool _isAttack;
     private Vector2 _direction;
     
     [HideInInspector] public int handlingObj;
@@ -56,6 +57,11 @@ public class Player : MonoBehaviour
         get { return _isWaltering; }
         set { _isWaltering = value; }
     }
+     public bool isAttack
+    {
+        get { return _isAttack; }
+        set { _isAttack = value; }
+    }
 
     private void Start()
     {
@@ -84,12 +90,18 @@ public class Player : MonoBehaviour
                 handlingObj = 2;
             }
 
+            if(Input.GetKeyDown(KeyCode.Alpha4))
+            {
+                handlingObj = 3;
+            }
+
             OnInput();
             OnRun();
             OnRolling();
             onCutting();
             onDig();
             onWaltering();
+            onAttack();
         }
         
     }
@@ -158,6 +170,23 @@ public class Player : MonoBehaviour
                 }
             }
             
+        }
+
+        void onAttack()
+        {
+            if(handlingObj == 3)
+            {
+                if(Input.GetMouseButtonDown(0))
+                {
+                    isAttack = true;
+                    speed = 0f;
+                }
+                if(Input.GetMouseButtonUp(0))
+                {
+                    isAttack = false;
+                    speed = initialSpeed;
+                }
+            }
         }
 
         void OnInput()

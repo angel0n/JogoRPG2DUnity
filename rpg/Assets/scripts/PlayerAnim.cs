@@ -7,6 +7,14 @@ public class PlayerAnim : MonoBehaviour
     private Player Player;
     private Animator Anim;
     private Casting cast;
+    private bool isHitting;
+    private float recoveryTime = 1f;
+    private float timeCount;
+
+    [Header("Attack Seting")]
+    [SerializeField] private Transform attackPointer;
+    [SerializeField] private float radius;
+    [SerializeField] private LayerMask enemyLayer;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +29,17 @@ public class PlayerAnim : MonoBehaviour
     {
         OnMove();
         OnRun();
+        if(isHitting)
+        {
+            timeCount += Time.deltaTime;
+
+            if(timeCount >= recoveryTime)
+            {
+                isHitting = false;
+                timeCount = 0f;
+            }
+        }
+        
     }
 
 
@@ -72,6 +91,11 @@ public class PlayerAnim : MonoBehaviour
             {
                 Anim.SetInteger("transition", 5);
             }
+             //animação de ataque
+            if(Player.isAttack)
+            {
+                Anim.SetInteger("transition", 6);
+            }
 
         }
         
@@ -83,27 +107,57 @@ public class PlayerAnim : MonoBehaviour
             }
         }
 
-        //chamado quando jogador presiona botão de ação na agua
-        public void onCastingStarted()
-        {
-            Anim.SetTrigger("isCasting");
-            Player.isPaused = true;
-        }
-        //chamado quando termina a animação de pesca
-        public void onCastingEnded()
-        {
-            cast.onCasting();
-             Player.isPaused = false;
-        }
-
-        public void onHammeringStarted()
-        {
-            Anim.SetBool("hammering",true);
-        }
-        public void onHammeringEnded()
-        {
-            Anim.SetBool("hammering",false);
-        }
+        
     #endregion
 
+    #region Attack
+
+        public void onAttack()
+        {
+            Collider2D hit = Physics2D.OverlapCircle(attackPointer.position,radius,enemyLayer);
+
+            if(hit != null)
+            {
+                //atacou o inimigo
+                Debug.Log("Acertou o inimigo");
+            }
+        }
+
+        private void OnDrawGizmosSelected() {
+            Gizmos.DrawWireSphere(attackPointer.position,radius);
+        }
+
+    #endregion
+
+
+
+    //chamado quando jogador presiona botão de ação na agua
+    public void onCastingStarted()
+    {
+        Anim.SetTrigger("isCasting");
+        Player.isPaused = true;
+    }
+    //chamado quando termina a animação de pesca
+    public void onCastingEnded()
+    {
+        cast.onCasting();
+            Player.isPaused = false;
+    }
+
+    public void onHammeringStarted()
+    {
+        Anim.SetBool("hammering",true);
+    }
+    public void onHammeringEnded()
+    {
+        Anim.SetBool("hammering",false);
+    }
+    public void onHit()
+    {
+        if(!isHitting)
+        {
+            Anim.SetTrigger("isHit");
+            isHitting = true;
+        }
+    }
 }

@@ -52,8 +52,10 @@
      <Compile Include="Assets\scripts\Drops Itens\Wood.cs" />
      <Compile Include="Assets\scripts\PlayerItens.cs" />
      <Compile Include="Assets\scripts\Buildings\House.cs" />
+     <Compile Include="Assets\scripts\Enemy\Skeleton.cs" />
      <Compile Include="Assets\scripts\Farming\Walter.cs" />
      <Compile Include="Assets\scripts\Farming\Casting.cs" />
+     <Compile Include="Assets\scripts\Enemy\AnimationControl.cs" />
      <Compile Include="Assets\scripts\PlayerAnim.cs" />
      <Compile Include="Assets\scripts\Dialogue\DialogueSettings.cs" />
      <Compile Include="Assets\scripts\NPC\NPC.cs" />
@@ -730,6 +732,16 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="NavMeshComponentsEditor.csproj">
+      <Project>{AB5F8949-8A04-380A-8E03-2248FE2F510A}</Project>
+      <Name>NavMeshComponentsEditor</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponents.csproj">
+      <Project>{94D1C891-4AB2-1FE6-05F9-9D693547E1E4}</Project>
+      <Name>NavMeshComponents</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
