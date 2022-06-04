@@ -54,9 +54,12 @@
      <Compile Include="Assets\scripts\Buildings\House.cs" />
      <Compile Include="Assets\scripts\Enemy\Skeleton.cs" />
      <Compile Include="Assets\scripts\Farming\Walter.cs" />
+     <Compile Include="Assets\Sounds\Script\AudioControl.cs" />
      <Compile Include="Assets\scripts\Farming\Casting.cs" />
      <Compile Include="Assets\scripts\Enemy\AnimationControl.cs" />
      <Compile Include="Assets\scripts\PlayerAnim.cs" />
+     <Compile Include="Assets\scripts\Sounds\ActorSFX.cs" />
+     <Compile Include="Assets\Sounds\Script\AudioManager.cs" />
      <Compile Include="Assets\scripts\Dialogue\DialogueSettings.cs" />
      <Compile Include="Assets\scripts\NPC\NPC.cs" />
      <Compile Include="Assets\scripts\HUD\HUDController.cs" />

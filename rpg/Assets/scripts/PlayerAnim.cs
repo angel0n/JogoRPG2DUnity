@@ -118,8 +118,8 @@ public class PlayerAnim : MonoBehaviour
 
             if(hit != null)
             {
-                //atacou o inimigo
-                Debug.Log("Acertou o inimigo");
+                //pega um objeto filho
+                hit.GetComponentInChildren<AnimationControl>().onHit();
             }
         }
 
